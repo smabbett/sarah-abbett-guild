@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Page</title>
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 align="center">Weather Page</h1>
+            <hr/>
+            <ul class="list-group" id="errorMessages"></ul>
+            <div class="row" align="center" style="height: 100px">
+                        <form class="form-inline" role="form" id="weather-form">
+                            <div class="form-group col-md-4" id="getZipCode">
+                                <label for="zipCode" class="control-label">
+                                    Zip Code:
+                                </label>
+                                    <input type="text"
+                                           pattern="[0-9]{5}"
+                                           class="form-control"
+                                           id="zipCode"
+                                           placeholder="Zip Code" required/>
+                            </div>
+                            <div class="form-group col-md-4" id="getUnits">
+                                <label for="units" class="control-label">
+                                    Units:
+                                </label>
+
+                                <select class="form-control" id="units" placeholder="Imperial" required/>
+                                  <option>Imperial</option>
+                                  <option>Metric</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                    <input type="hidden" id="zipCode">
+                                    <button type="button"
+                                            id="getWeather-button"
+                                            class="btn btn-default">
+                                        Get Weather
+                                    </button>
+                            </div>
+                        </form>
+            </div>
+            <h2 id="currentHeader"></h2>
+            <div class="row" id="currentConditions" style="height: 150px">
+
+            </div>
+            <h2 id="fiveDayHeader"></h2>
+            <div class="row" id="fiveDayConditions" style="height: 150px">
+
+            </div>
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
